@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "prettier --trailing-comma es5 --single-quote --write",
+      "git add"
+    ],
+    "yarn.lock": [
+      "git rm --cached"
+    ]
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.16.4",
+    "lerna-changelog": "^0.8.2",
+    "lint-staged": "^9.2.5",
+    "prettier": "^1.18.2"
+  }
+}
